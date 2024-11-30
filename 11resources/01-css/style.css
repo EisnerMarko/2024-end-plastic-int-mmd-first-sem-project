@@ -8,13 +8,16 @@
 
     --background-color: #ffffff;
     --background-color-section: #6EE0B6;
+    --color-navigation-text: #000000;
     --background-color-footer: #000000;
     --color-buttons: #6EE0B6;
+    --color-button-text: #000000;
     --color-cards: #89cff0;
     --color_brown: #603808;
     --color-black: #000000;
     --color-white: #ffffff;
     --color-box-shadow: #00000040;
+    --color-hero: #ffffff;
 }
 
 * {
@@ -73,7 +76,7 @@
 
 .menu-container ul li a,
 .menu-container button{
-    color:var(--color-black);
+    color:var(--color-navigation-text);
     text-decoration: none;
     cursor: pointer;
 }
@@ -104,24 +107,49 @@
 .hero_container h4{
     font-weight: 300;
     font-size: 12px;
-    color: var(--color-white);
+    color: var(--color-hero);
     text-transform: uppercase;
     grid-column: 1 / span 6;
     grid-row: 2;
 }
 
 .hero_container h1{
-    color: var(--color-white);
-    text-transform: uppercase;
+    color: var(--color-hero);
     grid-column: 1 / span 12;
     grid-row: 3;
 }
 
 .hero_container p{
-    color: var(--color-white);
+    color: var(--color-hero);
     grid-column: 1 / span 6;
     grid-row: 4;
     font-weight: 300;
     font-size: 16px;
     line-height: 30px;
+}
+
+.hero_container a{
+    grid-column: 1 / span 2;
+    grid-row: 5;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--color-buttons);
+    border: none;
+    border-radius: 20px;
+    width: var(--width-full);
+    height: 50px;
+    box-shadow: 4px 4px 4px 0px var(--color-box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_container a h4{
+    color:var(--color-button-text);
+    font-family: "Geologica", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
