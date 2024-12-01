@@ -98,6 +98,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    margin-bottom: 40px;
 }
 
 .hero_container{
@@ -152,4 +153,40 @@
     line-height: 17.5px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+}
+
+.cards_container{
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.cards_template{
+    grid-column: span 3;
+    background-color: var(--color-cards);
+    box-shadow: 10px 10px 10px 0px var(--color-box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 365px;
+}
+
+.card_icon{
+    font-size: 100px;
+    margin: 43px 0;
+}
+
+.cards_template h3{
+    margin-bottom: 29px;
+}
+
+.cards_template p{
+    margin: 0px 23px 43px 23px;
+    font-size: 16px;
+    font-family: Merriweather Sans;
+    line-height: 20px;
+}
+
+.cards_template:nth-child(1),
+.cards_template:nth-child(3){
+    margin-top: 90px;
 }
