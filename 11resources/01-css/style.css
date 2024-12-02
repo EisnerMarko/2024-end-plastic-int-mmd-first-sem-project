@@ -11,7 +11,9 @@
     --color-navigation-text: #000000;
     --background-color-footer: #000000;
     --color-buttons: #6EE0B6;
+    --color-form-buttons: #000000;
     --color-button-text: #000000;
+    --color-form-text: #ffffff;
     --color-cards: #89cff0;
     --color_brown: #603808;
     --color-black: #000000;
@@ -290,4 +292,107 @@
     justify-self: center;
     align-items: center;
     justify-content: center;
+}
+
+.join_us{
+    background-color: var(--background-color-section);
+    width: var(--width-full);
+}
+
+.join_us_container{
+    padding: 100px 0px;
+}
+
+.join_us_container p{
+    grid-column: 1 / span 5;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.join_us_container form{
+    grid-row: 1 / span 2 ;
+    grid-column: 7 / span 6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap);
+}
+
+.form_input_half{
+    grid-column: span 1;
+    margin-bottom: 30px;
+}
+
+.form_input{
+    grid-column: span 2;
+}
+
+.form_input,
+.form_input_half{
+    height: 45px;
+    border: 1px solid #D9D9D9;
+    background-color: var(--background-color);
+    font-family: "Geologica", sans-serif;
+    font-size: 14px;
+    padding-left: 15px;
+    letter-spacing: 0.05em;
+}
+
+.agree_to_terms{
+    grid-column: span 2;
+    font-family: "Geologica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.agree_to_terms input[type="checkbox"] {
+    transform: scale(1.6);
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--color-form-buttons);
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.agree_to_terms input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+    width: 8px;
+    height: 4px;
+    border: 1px solid var(--color-form-buttons);
+    border-width: 2px 2px 0 0;
+}
+
+.agree_to_terms input{
+    margin-left: 4px;
+}
+
+.agree_to_terms label{
+    margin-left: 15px;
+}
+
+.join_us_container button{
+    grid-column: span 2;
+    width: 149px;
+    height: 36px;
+    border-radius: 20px;
+    opacity: 0px;
+    box-shadow: 4px 4px 4px 0px var(--color-box-shadow);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-form-buttons);
+    color: var(--color-form-text);
+    justify-self: center;
 }
