@@ -94,6 +94,12 @@
     height: 36px;
     box-shadow: 4px 4px 4px 0px var(--color-box-shadow);
     grid-column: 11 / span 2;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.menu-container button:hover{
+    transform: scale(1.1);
 }
 
 .hero_section{
@@ -115,7 +121,7 @@
     font-size: 12px;
     color: var(--color-hero);
     text-transform: uppercase;
-    grid-column: 1 / span 6;
+    grid-column: span 12;
     grid-row: 2;
 }
 
@@ -148,6 +154,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.hero_container a:hover{
+    transform: scale(1.1);
 }
 
 .hero_container a h4{
@@ -173,6 +185,12 @@
     flex-direction: column;
     align-items: center;
     height: 365px;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.cards_template:hover{
+    transform: scale(1.1);
 }
 
 .card_icon{
@@ -205,6 +223,10 @@
     margin-bottom: 20px;
 }
 
+.headline_h2_cards{
+    grid-column: 1 / span 12;
+}
+
 .know_us_better p{
     grid-column: 1 / span 5;
     font-size: 16px;
@@ -225,7 +247,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
+    transform: scale(1);
 }
+
+.know_us_better a:hover{
+    transform: scale(1.1);
+}
+
 
 .know_us_better a h4{
     color:var(--color-button-text);
@@ -252,9 +281,14 @@
 }
 
 .aritcles_template{
-    grid-row: 2;
     grid-column: span 3;
     margin-top: -50px;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.aritcles_template:hover{
+    transform: scale(1.05);
 }
 
 .aritcles_template img{
@@ -283,9 +317,9 @@
 }
 
 .news_articles_container button{
-    grid-row: 3;
     background-color: var(--color-buttons);
     border: none;
+    cursor: pointer;
     border-radius: 20px;
     width: 149px;
     height: 36px;
@@ -295,6 +329,12 @@
     justify-self: center;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.news_articles_container button:hover{
+    transform: scale(1.1);
 }
 
 .join_us{
@@ -303,7 +343,7 @@
 }
 
 .join_us_container{
-    padding: 100px 0px;
+    padding: 90px 0px;
 }
 
 .join_us_container p{
@@ -398,7 +438,14 @@
     background-color: var(--color-form-buttons);
     color: var(--color-form-text);
     justify-self: center;
+    transition: all 0.5s ease;
+    transform: scale(1);
 }
+
+.join_us_container button:hover{
+    transform: scale(1.1);
+}
+
 
 .footer_wrapper{
     background-color: var(--background-color-footer);
@@ -454,7 +501,7 @@
 }
 
 .footer_right{
-    grid-column: 10 / span 3;
+    grid-column: 10 / span 2;
 }
 
 .footer_right_nav_links,
@@ -475,6 +522,18 @@
     text-transform: uppercase;
 }
 
+.footer_icon_bottle{
+    grid-column: 12;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    color: var(--color-footer-text);
+    width: 100px;
+    height: 100px;
+    margin-bottom: -5px;
+}
+
 .footer_line{
     width: 100%;
     height: 1px;
@@ -492,4 +551,95 @@
     grid-column: span 6;
     text-align: right;
     margin-bottom: 10px;
+}
+
+@media (width < 1250px) {
+
+    :root {
+      --width-12col: 100%;
+   }
+  
+   section,
+   .under_line_contet{
+    padding: 0 30px;
+   }
+}
+
+@media (width < 1138px) {
+
+    .footer_middle{
+        grid-column: 6 / span 4;
+    }
+   
+    .footer_left{
+        grid-column: 1 / span 5;
+    }
+    
+    .cards_template{
+        grid-column: span 6;
+    }
+    
+    .hero_container h1{
+        grid-column: 1 / span 11;
+    }
+    
+    .hero_container p{
+        grid-column: 1 / span 8;
+    }
+    
+    .hero_container a{
+        grid-column: 1 / span 3;
+    }
+
+    .aritcles_template{
+        grid-column: span 6;
+    }
+
+    .know_us_better a{
+        grid-column: span 5;
+    }
+}
+
+@media (width < 768px) {
+
+    .hero_container a{
+        grid-column: 1 / span 4;
+    }
+    
+    .footer_left{
+        grid-column: span 12;
+    }
+
+    .footer_middle{
+        grid-column: 1 / span 7;
+    }
+   
+    .footer_right{
+        grid-column: 8 / span 4;
+    }
+
+    .footer_icon_bottle{
+        grid-row: 2;
+    }
+
+    .headline_h2_mobile{
+        grid-column: span 12;
+    }
+
+    .know_us_better p,
+    .join_us_container p{
+        grid-column: span 12;
+    }
+
+    .join_us_container form{
+        grid-column: span 12;
+        grid-row: 3;
+        padding-top: 40px;
+    }
+
+    .know_us_better img{
+        grid-column: span 12;
+        grid-row: 4;
+        margin-top: 40px;
+    }
 }
